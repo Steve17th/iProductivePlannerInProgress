@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root{
+    --primary-color: #FFC733;
+    --mainbackgroundcolor: #292A33;
+    --background: '.background';
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: #292A33;
+}
+
+
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* h1, */
+h2 {
+  /* font-weight: 300; */
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+  
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+/* Navbar */
+.navbar-main{
+    background-color: #292A33;
+    height: 70px;
+    overflow: hidden;
+}
+
+.navbar-main::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar-main ul{
+    display: flex;
+}
+
+.navbar-main a{
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+/* a .logo.prim-txt:hover{
+    padding: 0px !important;
+    margin: 0 !important;
+    border-bottom: none;
+} */
+
+a:is(:link, :active, :visited).active{
+    color: rgb(148, 114, 18);
+    font-weight: 1000;
+    transition: all 1s ease-in;
+    border-bottom: inset rgb(148, 114, 18) ;
+}
+
+.navbar a:hover {
+    border-bottom: 2px var(--primary-color) solid;
+}
+
+.navbar-main .flex{
+    justify-content: space-between;
+
+}
+
+
+
+/* .stick-nav{
+    background-color: #FFC733;
+} */
+
+/* Login card */
+
+.login-card{
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end;
+    /* background-color: #fff; */
+}
+
+.login-card .login-form{
+    margin: 30px 0;
+}
+
+.login-card input[type='text'],
+.login-card input[type='password'],
+.login-card input[type='email']{
+    border: 0;
+    border-bottom: 1px solid var(--primary-color);
+    width: 100%;
+    padding: 3px;
+    font-size:16px;
+    color: #fff;
+}
+
+.signup input[type='text'],
+.signup input[type='password'],
+.signup input[type='email']{
+    border: 0;
+    border-bottom: 1px solid var(--primary-color);
+    width: 100%;
+    padding: 3px;
+    font-size:16px;
+    color: #fff;
+}
+/* .btn{
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+} */
+
+.btn a:hover{
+    background: var(--primary-color);
+}
+
+/* Login  */
+.login-page {
+    height: 400px;
+    /* background-color: var(--primary-color); */
+    color: #fff;
+    position: relative;
+}
+  
+.login-page h1 {
+    font-size: 40px;
+ }
+  
+.login-page p {
+    margin: 20px 0;
+}
+  
+.login-page .grid {
+    overflow: visible;
+    grid-template-columns: 55% auto;
+    gap: 30px;
+}
+  
+.login-text {
+    margin-top: 100px;
+    animation:slideInFromLeft 1s ease-in;
+    color: #fff;
+    /* margin-right: 80px; */
+  }
+
+.login-card  {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end;
+    animation: slideInFromRight 1s ease-in;
+}
+
+.signup{
+    margin: auto;
+    position: relative;
+    top: 60px;
+    height: 435px;
+    width: 445px;
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end;
+    animation: slideInFromRight 1s ease-in;
+    margin-bottom: 15px;
+}
+
+.errormsg{
+    align-items: center;
+}
+
+  
+.login-card .login-form {
+    margin: 30px 0;
+}
+
+.signup .login-form{
+    margin: 30px 0;
+}
+
+.login-page::before,
+.login-page::after {
+  content: '';
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  /* background: #fff; */
+  /* transform: skewY(-3deg);
+  -webkit-transform: skewY(-3deg);
+  -moz-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg); */ 
+}
+
+.newAccount a{
+    color: #fff;
+}
+.newAccount a:hover{
+    color: var(--primary-color);
+}
+
+.newAccount{
+    margin-top: 5px;
+    display: flex;
+}
+
+/* Features Page */
+
+.login-text .features {
+    /* margin-top: 100px; */
+    animation:slideInFromLeft 1s ease-in;
+    color: #fff;
+    margin-right: 80px;
+  }
+
+.clock {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 20px solid #b06a26;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    background: #fefbf2;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0px 0px 10px black;
+    margin-left: 200px;
+    transform: perspective(200px) rotate3D(0, 0, 0, 30deg)
+}
+
+.clock::before {
+    position: absolute;
+    content: '';
+    height: 130px;
+    width: 10px;
+    background: black;
+    top: 50%;
+    left: calc(50% - 5px);
+    border-radius: 5px;
+    animation: spin 50s linear infinite;
+    transform-origin: top;
+}
+
+.clock::after {
+    position: absolute;
+    content: '';
+    height: 100px;
+    width: 10px;
+    background: black;
+    top: 50%;
+    left: calc(50% - 5px);
+    border-radius: 5px;
+    animation: spin 72s linear infinite;
+    transform-origin: top;
+    
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(-180deg)
+    }
+    100% {
+        transform: rotate(180deg)
+    }
+}
+
+.help-prompt{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+textarea{
+    border-color: var(--primary-color);
+    border-radius: 10px;
+    resize: none;
+    height: 300px;
+    width:600px;
+    background-color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 5px;
+    border-width: 2px;
+}
+
+.taskDescription{
+    height: 300px;
+    width:600px;
+}
+
+
+/* Graphs */
+   .background {
+      fill: #DFEAFD;  
+    }
+    
+    .foreground {
+      fill: var(--primary-color);
+    }
+    
+    .progress-meter text {
+      font-family: 'Georgia' sans-serif;
+      font-size: 90px;
+    }
+    
+    .progress-meter .text2 {
+      font-family: 'Georgia' sans-serif;
+      font-size: 20px;
+    } 
+  
+
+ /* Side Nav */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: transparent; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    overflow: hidden;
+    font-family: 'Lato',sans-serif;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: var(--primary-color);
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .topclosebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    background-color: transparent;
+    /* font-size: 36px; */
+    /* margin-left: 50px; */
+    width:100%;
+
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 500px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+
+  }
+
+  @media(max-width:800px){
+    .clock{display: none;}
+    .login-text{display: grid;}
+  }
+
+
+  .switch {
+    position: relative;
+    /* display: inline-block; */
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+.tasks > p{
+    display: flex;
+}
+.profileTasks p{
+    color: #fff;
+}
+
+.taskHeaders >div{
+    margin-right: 100px;
+}
+
+p .taskDisplay:hover + .hide{
+    display: block;
+    opacity: 0.7;
+}
+
+.taskDisplay{
+    color:red;
+}
+
+  
+  
+  
